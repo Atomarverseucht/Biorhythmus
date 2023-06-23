@@ -41,6 +41,11 @@
             this.btDark = new System.Windows.Forms.Button();
             this.lbUhr = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btEmail = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.cbSprache = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dtpGeburtstag
@@ -79,6 +84,7 @@
             this.btVerarbeitung.TabIndex = 3;
             this.btVerarbeitung.Text = "verarbeite";
             this.btVerarbeitung.UseVisualStyleBackColor = true;
+            this.btVerarbeitung.Click += new System.EventHandler(this.btVerarbeitung_Click);
             // 
             // lbAusgabe
             // 
@@ -92,7 +98,7 @@
             // lbKondition
             // 
             this.lbKondition.AutoSize = true;
-            this.lbKondition.Location = new System.Drawing.Point(28, 272);
+            this.lbKondition.Location = new System.Drawing.Point(66, 250);
             this.lbKondition.Name = "lbKondition";
             this.lbKondition.Size = new System.Drawing.Size(35, 13);
             this.lbKondition.TabIndex = 5;
@@ -100,9 +106,9 @@
             // 
             // pnDiagramm
             // 
-            this.pnDiagramm.Location = new System.Drawing.Point(441, 345);
+            this.pnDiagramm.Location = new System.Drawing.Point(453, 294);
             this.pnDiagramm.Name = "pnDiagramm";
-            this.pnDiagramm.Size = new System.Drawing.Size(330, 174);
+            this.pnDiagramm.Size = new System.Drawing.Size(288, 174);
             this.pnDiagramm.TabIndex = 6;
             // 
             // label4
@@ -138,22 +144,75 @@
             // lbUhr
             // 
             this.lbUhr.AutoSize = true;
-            this.lbUhr.Location = new System.Drawing.Point(235, 107);
+            this.lbUhr.Location = new System.Drawing.Point(352, 108);
             this.lbUhr.Name = "lbUhr";
             this.lbUhr.Size = new System.Drawing.Size(34, 13);
             this.lbUhr.TabIndex = 10;
             this.lbUhr.Text = "At:om";
+            this.lbUhr.Click += new System.EventHandler(this.lbUhr_Click);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btEmail
+            // 
+            this.btEmail.Location = new System.Drawing.Point(145, 507);
+            this.btEmail.Name = "btEmail";
+            this.btEmail.Size = new System.Drawing.Size(277, 23);
+            this.btEmail.TabIndex = 11;
+            this.btEmail.Text = "Email versenden";
+            this.btEmail.UseVisualStyleBackColor = true;
+            this.btEmail.Click += new System.EventHandler(this.btEmail_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(142, 484);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Email eingeben:";
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.Location = new System.Drawing.Point(230, 481);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(192, 20);
+            this.tbEmail.TabIndex = 13;
+            // 
+            // cbSprache
+            // 
+            this.cbSprache.FormattingEnabled = true;
+            this.cbSprache.Items.AddRange(new object[] {
+            "Deutsch",
+            "Englisch"});
+            this.cbSprache.Location = new System.Drawing.Point(739, 518);
+            this.cbSprache.Name = "cbSprache";
+            this.cbSprache.Size = new System.Drawing.Size(121, 21);
+            this.cbSprache.TabIndex = 14;
+            this.cbSprache.SelectedIndexChanged += new System.EventHandler(this.cbSprache_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(657, 521);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Sprache:";
+            // 
             // Kondition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 580);
+            this.ClientSize = new System.Drawing.Size(885, 580);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cbSprache);
+            this.Controls.Add(this.tbEmail);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btEmail);
             this.Controls.Add(this.lbUhr);
             this.Controls.Add(this.btDark);
             this.Controls.Add(this.rtbTabelle);
@@ -187,6 +246,10 @@
         private System.Windows.Forms.Button btDark;
         private System.Windows.Forms.Label lbUhr;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btEmail;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.ComboBox cbSprache;
+        private System.Windows.Forms.Label label3;
     }
 }
-

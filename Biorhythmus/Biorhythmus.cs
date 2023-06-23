@@ -180,7 +180,7 @@ namespace Biorhythmus
             string prognose_14Tage = "";
             for (int t = 1; t <= 14; t++)
             {
-                prognose_14Tage = prognose_14Tage + " " + t + " \t" + Math.Round(berechneKonditionKoerperlich(t), 0) + " \t\t" + Math.Round(berechneKonditionGeistig(t), 0) + " \t\t" + Math.Round(berechneKonditionPsychisch(t), 0) + "\n";
+                prognose_14Tage = prognose_14Tage + " " + t + " |  \t" + Math.Round(berechneKonditionKoerperlich(t), 0) + "% \t\t" + Math.Round(berechneKonditionGeistig(t), 0) + "% \t\t" + Math.Round(berechneKonditionPsychisch(t), 0) + "%\n";
             }
             return prognose_14Tage;
         }
